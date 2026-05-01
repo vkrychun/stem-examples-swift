@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace version="1.0">
+   <FileRef location="group:StemJSON"/>
+   <FileRef location="group:StemDependencies"/>
+   <FileRef location="container:StemQuickStart/StemQuickStart.xcodeproj"/>
+   <FileRef location="container:StemHome/StemHome.xcodeproj"/>
+   <FileRef location="container:StemSwiftUI/StemSwiftUI.xcodeproj"/>
+   <FileRef location="container:StemUIKit/StemUIKit.xcodeproj"/>
+</Workspace>

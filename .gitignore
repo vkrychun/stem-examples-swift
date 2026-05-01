@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Firebase configuration — never commit real project credentials.
+# Each developer drops their own GoogleService-Info.plist. See
+# StemSwiftUI/README or the Messenger demo notes for setup.
+StemSwiftUI/StemSwiftUI/GoogleService-Info.plist
+StemHome/StemHome/GoogleService-Info.plist

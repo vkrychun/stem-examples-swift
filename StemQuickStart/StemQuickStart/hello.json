@@ -1,0 +1,139 @@
+{
+  "id": "hello_module",
+  "type": "module",
+  "context": {
+    "title": "Quick Start",
+    "icon": "sparkles"
+  },
+  "state": {
+    "count": 0,
+    "name": "",
+    "darkMode": false
+  },
+  "children": [
+    {
+      "id": "hello_scroll",
+      "type": "scroll",
+      "children": [
+        {
+          "id": "hello_root",
+          "type": "vstack",
+          "context": { "_spacing": 24, "_alignment": "center" },
+          "style": { "layout": { "maxWidth": "infinity", "padding": 24 } },
+          "children": [
+            {
+              "id": "hello_icon",
+              "type": "image",
+              "context": { "_source": "sf://sparkles" },
+              "style": { "layout": { "width": 60, "height": 60 }, "common": { "foreground": { "color": "#5856D6" } } }
+            },
+            {
+              "id": "hello_title",
+              "type": "text",
+              "context": { "_text": "Hello, StemJSON!" },
+              "style": { "common": { "font": { "kind": "system", "size": 28, "weight": "bold", "design": "rounded" } } }
+            },
+            {
+              "id": "hello_subtitle",
+              "type": "text",
+              "context": { "_text": "This entire screen is defined in JSON" },
+              "style": { "common": { "font": "subheadline", "foreground": { "color": "secondary" } } }
+            },
+            { "id": "hello_div1", "type": "divider" },
+            {
+              "id": "counter_section",
+              "type": "vstack",
+              "context": { "_spacing": 12 },
+              "style": { "layout": { "maxWidth": "infinity", "padding": 20 }, "common": { "background": { "color": { "color": "#5856D6", "opacity": 0.08 } }, "cornerRadius": 16 } },
+              "children": [
+                {
+                  "id": "counter_label",
+                  "type": "text",
+                  "context": { "_text": "Counter" },
+                  "style": { "common": { "font": { "kind": "system", "size": 14, "weight": "semibold" }, "foreground": { "color": "secondary" } } }
+                },
+                {
+                  "id": "counter_value",
+                  "type": "text",
+                  "context": { "_text": "${count}" },
+                  "style": { "common": { "font": { "kind": "system", "size": 48, "weight": "bold", "design": "rounded" }, "foreground": { "color": "#5856D6" } } }
+                },
+                {
+                  "id": "counter_buttons",
+                  "type": "hstack",
+                  "context": { "_spacing": 16 },
+                  "children": [
+                    {
+                      "id": "btn_minus",
+                      "type": "button",
+                      "context": { "_label": "−" },
+                      "style": { "button": { "custom": { "layout": { "maxWidth": "infinity", "minHeight": 44 }, "common": { "background": { "color": { "color": "#FF3B30", "opacity": 0.12 } }, "foreground": { "color": "#FF3B30" }, "cornerRadius": 12, "font": { "kind": "system", "size": 20, "weight": "bold" } } } } },
+                      "events": { "onTap": [{ "state": { "id": "decrement", "input": { "count": "{{ ${count} - 1 }}" } } }] }
+                    },
+                    {
+                      "id": "btn_plus",
+                      "type": "button",
+                      "context": { "_label": "+" },
+                      "style": { "button": { "custom": { "layout": { "maxWidth": "infinity", "minHeight": 44 }, "common": { "background": { "color": { "color": "#34C759", "opacity": 0.12 } }, "foreground": { "color": "#34C759" }, "cornerRadius": 12, "font": { "kind": "system", "size": 20, "weight": "bold" } } } } },
+                      "events": { "onTap": [{ "state": { "id": "increment", "input": { "count": "{{ ${count} + 1 }}" } } }] }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "name_section",
+              "type": "vstack",
+              "context": { "_spacing": 12, "_alignment": "leading" },
+              "style": { "layout": { "maxWidth": "infinity", "padding": 20 }, "common": { "background": { "color": { "color": "#007AFF", "opacity": 0.08 } }, "cornerRadius": 16 } },
+              "children": [
+                {
+                  "id": "name_label",
+                  "type": "text",
+                  "context": { "_text": "Two-way binding" },
+                  "style": { "common": { "font": { "kind": "system", "size": 14, "weight": "semibold" }, "foreground": { "color": "secondary" } } }
+                },
+                {
+                  "id": "name_field",
+                  "type": "textfield",
+                  "context": { "_label": "Type your name...", "_text": "${name}" }
+                },
+                {
+                  "id": "name_greeting",
+                  "type": "text",
+                  "context": { "_text": "{{ notEmpty( ${name} ) ? 'Hello, ' + ${name} + '!' : 'Type above to see a greeting' }}" },
+                  "style": { "common": { "font": { "kind": "system", "size": 17 }, "foreground": { "color": "#007AFF" } } }
+                }
+              ]
+            },
+            {
+              "id": "toggle_section",
+              "type": "hstack",
+              "context": { "_spacing": 12 },
+              "style": { "layout": { "maxWidth": "infinity", "padding": 20 }, "common": { "background": { "color": { "color": "#FF9F0A", "opacity": 0.08 } }, "cornerRadius": 16 } },
+              "children": [
+                {
+                  "id": "toggle_icon",
+                  "type": "image",
+                  "context": { "_source": "{{ ${darkMode} ? 'sf://moon.fill' : 'sf://sun.max.fill' }}" },
+                  "style": { "layout": { "width": 24, "height": 24 }, "common": { "foreground": { "color": "#FF9F0A" } } }
+                },
+                {
+                  "id": "dark_toggle",
+                  "type": "toggle",
+                  "context": { "_label": "Dark Mode", "_isOn": "${darkMode}" }
+                }
+              ]
+            },
+            {
+              "id": "hello_footer",
+              "type": "text",
+              "context": { "_text": "Built with StemJSON \u2014 declarative UI from pure JSON" },
+              "style": { "common": { "font": "caption", "foreground": { "color": "accentcolor" } } }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
