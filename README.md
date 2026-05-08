@@ -55,7 +55,17 @@ Other demos have no external dependencies.
 - [**StemJSON spec**](https://github.com/vkrychun/StemJSON/blob/main/spec/v1.0.md) — human-readable language specification.
 - [**StemJSON — LLM reference**](https://github.com/vkrychun/StemJSON/blob/main/spec/v1.0-ai.md) — condensed reference optimised for LLM prompts.
 - [**StemRuntimeSDK**](https://github.com/vkrychun/stem-runtime-swift) — the Swift runtime that renders it.
-- [**LICENSE**](LICENSE) — MIT for this repo's example code.
+
+## License
+
+The example code in this repository — Swift sources and JSON modules — is released under the [MIT License](LICENSE). Copy, adapt, ship.
+
+The two projects this repo links against are governed by their own licenses:
+
+- [**StemJSON specification**](https://github.com/vkrychun/StemJSON) — OWFa 1.0 with an additional attribution requirement.
+- [**StemRuntimeSDK**](https://github.com/vkrychun/stem-runtime-swift) — its own End-User License Agreement.
+
+If you redistribute or adapt the JSON modules in a product that implements StemJSON, the spec's attribution requirement still applies (see the [StemJSON LICENSE](https://github.com/vkrychun/StemJSON/blob/main/LICENSE)).
 
 ---
 

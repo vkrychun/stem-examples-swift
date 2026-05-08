@@ -19,28 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Scope: this license applies to the example application code and JSON modules
-in this repository — the Swift sources under StemQuickStart/, StemHome/,
-StemSwiftUI/, StemUIKit/, StemDependencies/, and the JSON modules in
-StemJSON/Sources/StemJSON/Resources/.
-
-It does NOT cover:
-  * The StemJSON DSL specification (https://github.com/vkrychun/StemJSON)
-  * The StemRuntimeSDK binary (https://github.com/vkrychun/stem-runtime-swift)
-
-Those are separate projects with their own licensing terms. This repository
-links against them and demonstrates their use; it does not redistribute them.
-
-The JSON modules under StemJSON/Sources/StemJSON/Resources/ are example
-StemJSON payloads. Any downstream product that implements the StemJSON
-specification and redistributes or adapts these modules remains subject to
-the attribution requirement set out in the StemJSON specification licence
-(OWFa 1.0 with additional attribution, see the StemJSON repository LICENSE).
-The MIT licence above covers Vasyl Krychun's copyright in the example code
-in this repository only; it does not grant any patent rights in the
-StemJSON language or in the StemRuntimeSDK — those rights, where granted,
-flow from the StemJSON specification licence (OWFa 1.0, Necessary Claims)
-and from the StemRuntimeSDK End-User Licence Agreement respectively.
