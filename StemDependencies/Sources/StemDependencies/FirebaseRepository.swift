@@ -79,6 +79,7 @@ public struct FirebaseEntity: StemRepoEntity {
 public final class FirebaseRepository: StemRepository {
     public typealias Entity = FirebaseEntity
     public let id: String
+    public var dependencyType: any StemDependencyType { AppRepositoryType.firebase }
 
     public struct Configuration: Decodable, Sendable {
         /// Base collection path, e.g. "apps/messenger_demo"

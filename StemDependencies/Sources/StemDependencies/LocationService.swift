@@ -45,6 +45,7 @@ import StemRuntimeSDK
 public final class LocationService: NSObject, StemService, Decodable, @unchecked Sendable {
 
     public let id: String
+    public var dependencyType: any StemDependencyType { AppServiceType.location }
 
     private var locationManager: CLLocationManager!
     private var locationContinuation: CheckedContinuation<[String: Any], any Error>?
