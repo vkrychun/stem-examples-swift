@@ -123,8 +123,8 @@
       "kind": "remoteSourceControl",
       "location": "https://github.com/vkrychun/stem-runtime-swift",
       "state": {
-        "revision": "2c986064abbfc4a59054539ec5df1fddccdad857",
-        "version": "1.1.0"
+        "revision": "6e3d11871f38a8edcd95767f0e8039e55e417fb2",
+        "version": "1.2.0"
       }
     }
   ],
